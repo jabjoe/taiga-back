@@ -18,6 +18,8 @@
 
 from django.db.models import Q
 from django.apps import apps
+from datetime import timedelta
+from django.utils import timezone
 
 from taiga.front.templatetags.functions import resolve
 

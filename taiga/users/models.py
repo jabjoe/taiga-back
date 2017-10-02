@@ -33,6 +33,7 @@ from django.db import models
 from django.dispatch import receiver
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.contenttypes.fields import GenericRelation
 
 from taiga.base.db.models.fields import JSONField
 from django_pglocks import advisory_lock
@@ -178,6 +179,8 @@ class User(AbstractBaseUser, PermissionsMixin):
                                                           default=settings.MAX_MEMBERSHIPS_PUBLIC_PROJECTS,
                                                           verbose_name=_("max number of memberships for "
                                                                          "each owned public project"))
+    timeline = GenericRelation("timeline.Timeline")
+
 
     _cached_memberships = None
     _cached_liked_ids = None
