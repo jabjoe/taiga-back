@@ -18,6 +18,7 @@ django-picklefield==0.3.2
 django-sampledatahelper==0.4.1
 django-sites==0.9
 django-sr==0.0.4
+django_pglocks==1.0.2
 djmail==1.0.1
 easy-thumbnails==2.4.1
 fn==0.4.3
